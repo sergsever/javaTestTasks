@@ -6,13 +6,18 @@ package com.lvov;
  */
 public class App 
 {
-    public static void reverseArray(int[] array){
-        for(int i = 0, j = array.length - 1; i < j; ++i, --j )
-        {
+    public static void reverseArray(int[] array) {
+        for (int i = 0, j = array.length - 1; i < j; ++i, --j) {
             int buff = array[j];
             array[j] = array[i];
             array[i] = buff;
         }
+    }
+    
+    public static int fibonacci(int n)
+        {
+            int res = n < 2? 1 : fibonacci(n -2) + fibonacci(n - 1);
+        return res;
     }
     public static void main( String[] args )
     {
@@ -23,6 +28,8 @@ public class App
         {
             System.out.println("i: " + i + "v: " + arr[i]);
         }
+        
+        System.out.println("fibonacci7:" + fibonacci(7));
         
     }
 }
